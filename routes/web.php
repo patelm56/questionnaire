@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/question/{id}', function($id) {
     return "This is going to show a question number {$id}";
 });
+
+Route::resource('questionnaires', 'QuestionnaireController');
+Route::resource('questions', 'QuestionController');
