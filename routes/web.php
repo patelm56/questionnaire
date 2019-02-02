@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/question/{id}', function($id) {
+    return "This is going to show a question number {$id}";
+});
