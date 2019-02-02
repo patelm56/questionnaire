@@ -4,6 +4,6 @@
 
 <p> {{$questionnaire->description }} </p>
 
-<button class="btn btn-outline-primary">Start the questionnaire</button>
+<a href="{{ route('questions.show', $questionnaire->questions[0]) }}" class="btn btn-outline-primary">Start the questionnaire</a>
 
 @endsection
