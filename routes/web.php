@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('questionnaires.show', [
+        'questionnaire' => App\Questionnaire::first()
+    ]);
 });
 
 Route::get('/question/{id}', function($id) {

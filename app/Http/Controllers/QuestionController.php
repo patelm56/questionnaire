@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Question;
+use App\Questionnaire;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -35,7 +36,20 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $questionnaire = Questionnaire::find($request->questionnaire_id);
+
+        $question = $questionnaire->questions->find($request->question_id);
+
+        $question->update(['answer' => $request->answer]);
+
+        $question->save();
+
+        if($questionnaire->questions->count() > 0 && $questionnaire->questions->count() < 3)
+        {
+            return redirect(route('questions.show', $question->id +1));
+        }
+
+        return view('thank-you');
     }
 
     /**

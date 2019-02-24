@@ -1,15 +1,20 @@
 @extends('shared.master')
 @section('content')
 
+    <h1>Question  {{ $question->id }} </h1>
+    <hr />
+
+    <img src="{{ asset("photos/{$question->photo}") }}" />
+
     <form class="form-group" action="{{ route('questions.store')}}" method="POST">
         @csrf
 
-        <label>question</label>
-        <input class="form-control" type="text" name="description" value="{{$question->description}}" readonly/>
+        <div class="mb-1"> {{$question->description}} </div>
 
-        <label>answer</label>
         <textarea class="form-control" type="text" name="answer"> {{  $question->answer }} </textarea>
-
-        <button type="submit" class=" form-control btn btn-primary">save</button>
+        <input type="hidden" name="question_id" value="{{ $question->id }}" />
+        <input type="hidden" name="questionnaire_id" value="{{ $question->questionnaire->id }}" />
+        <button type="submit" class=" form-control btn btn-primary mt-2">save</button>
     </form>
+   
 @endsection
