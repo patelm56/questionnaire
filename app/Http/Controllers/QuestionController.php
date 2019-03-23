@@ -37,14 +37,14 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         $questionnaire = Questionnaire::find($request->questionnaire_id);
-
+        
         $question = $questionnaire->questions->find($request->question_id);
 
         $question->update(['answer' => $request->answer]);
 
-        $question->save();
+        $conditionToGoToNextQuestion = $questionnaire->questions->count() > 0 && $questionnaire->questions->count() < 7 && $question->id != 6;
 
-        if($questionnaire->questions->count() > 0 && $questionnaire->questions->count() < 3)
+        if($conditionToGoToNextQuestion)
         {
             return redirect(route('questions.show', $question->id +1));
         }

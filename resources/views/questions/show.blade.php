@@ -9,7 +9,7 @@
     <form class="form-group" action="{{ route('questions.store')}}" method="POST">
         @csrf
 
-        <div class="mb-1"> {{$question->description}} </div>
+       <b> <div class="mb-2"> {{$question->description}} </div>
 
         <textarea class="form-control" type="text" name="answer"> {{  $question->answer }} </textarea>
         <input type="hidden" name="question_id" value="{{ $question->id }}" />
