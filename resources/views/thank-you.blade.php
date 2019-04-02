@@ -18,11 +18,12 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     </head>
-    <body background="{{ asset('photos/bg2.jpg') }}" >
+    <body background="{{ asset('photos/bg7.png') }}" >
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Thank you!</h1>
+                
+                <h2>Thank you for participating in the questionnaire, your feedback will contribute towards my project.</h2>
             </div>
         </div>
     </div>

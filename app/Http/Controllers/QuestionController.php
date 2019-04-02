@@ -42,7 +42,7 @@ class QuestionController extends Controller
 
         $question->update(['answer' => $request->answer]);
 
-        $conditionToGoToNextQuestion = $questionnaire->questions->count() > 0 && $questionnaire->questions->count() < 7 && $question->id != 6;
+        $conditionToGoToNextQuestion = $questionnaire->questions->count() > 0 && $questionnaire->questions->count() < 18 && $question->id != 17;
 
         if($conditionToGoToNextQuestion)
         {
