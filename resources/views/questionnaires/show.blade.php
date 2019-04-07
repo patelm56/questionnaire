@@ -4,12 +4,13 @@
 <head> 
 <h1> {{$questionnaire->title}}</h1> 
 
-<p> Dear Respondent,</p> 
+<p> Dear Sir/Madam,</p> 
 
-<p> My name is Mital Patel and I am a Computing for Business student at Aston University. I am 
-        conducting a study related to how e-commerce affects a user's buying behaviour and what impact is has on their online shopping experience. It would be highly appreciated if you could take a few minutes of your time to complete the following questionnaire. </p>
+<p> My name is Mital Patel and I’m a Computing for Business student in my final year at Aston University, Birmingham. I’m carrying out a research study for my dissertation which is looking at how price and sense of bargain impact consumers’ decisions to trust e-Commerce vendors.  The results from this study will inform better e-Commerce website design.  I would like to invite you to participate in this study by completing this questionnaire which will ask some background information about your online shopping experience, and will seek your opinions on the perceived trustworthiness of a range of e-Commerce websites. </p>
         
-        <p>  Please note that the information collected will be used for academic research only and would be kept anonymous and confidential. Thank you in advance. </p> 
+        <p>   Be assured that all answers you provide will be kept anonymous and confidential and will only be used for the purpose of my project.  This questionnaire should take you approximately 15-20 minutes to complete.
+
+By clicking on the continue button below, you consent to participate in this study and for the data you provide to be used for the purposes stated above. </p> 
 </head>
 
 
